@@ -17,12 +17,13 @@ jobs:
       - name: Set up JDK 8
         uses: actions/setup-java@v3
         with:
+          distribution: 'adopt'
           java-version: '8'
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v2
         with:
-          python-version: '3.8'  # Specify the Python version you want to use
+          python-version: '3.8'
 
       - name: Install Dependencies
         run: |
