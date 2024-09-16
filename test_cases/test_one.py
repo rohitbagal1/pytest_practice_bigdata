@@ -1,14 +1,11 @@
-from pyspark.sql.functions import *
-
 import pytest
-import sys
-from transformation.transformation_class import TransFormClass
 from test_data import data
-
+from transformation.transformation_class import TransFormClass
 class TestMathOperations(TransFormClass):
     def test_addition(self):
-        df_1=self.execute_transformations(data.columns_to_add, data.columns_to_drop, data.column_to_capitalize)
-        assert df_1.collect()== df_1.collect(), "Addition test failed"
+        
+         df=self.execute_transformations(data.columns_to_add, data.columns_to_drop, data.column_to_capitalize)
+         assert df.collect()!=df.collect(),"having hava error"
 
     def test_subtraction(self):
         assert 5 - 3 == 2, "Subtraction test failed"
