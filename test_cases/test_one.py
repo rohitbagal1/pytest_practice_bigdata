@@ -1,6 +1,6 @@
 import pytest
 
-class TestMathOperations(TransFormClass):
+class TestMathOperations:
     def test_addition(self):
          assert 2==2
 
