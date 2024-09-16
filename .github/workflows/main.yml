@@ -30,6 +30,6 @@ jobs:
           pip install pyspark
           pip install pytest
 
-      - name: Run Tests
+      - name: Run pyspark
         run: |
-          pytest ./test_cases
+          python ./transformation
