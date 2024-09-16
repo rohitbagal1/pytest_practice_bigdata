@@ -45,6 +45,10 @@ class TransFormClass(BaseDev):
         final_df = self.captilize_name_column_content(column_to_capitalize, df_without_city_column)
         
         return final_df
+        
+t = TransFormClass()
+df=t.execute_transformations(data.columns_to_add, data.columns_to_drop, data.column_to_capitalize)
+df.show()
 
 
 
