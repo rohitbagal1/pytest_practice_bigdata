@@ -1,14 +1,17 @@
 from base_class.dev_class import BaseDev
 from test_data import data
+from pyspark.sql import SparkSession
+
 
 class TransFormClass(BaseDev):
     def read_file_from_path(self):
+        spark = SparkSession.builder.appName("YourAppName").getOrCreate()
         data1 = [(1, "Alice","Purnia","12/06/2003","23/09/2050",-1),
                  (2, "Bob","Jaipur","12/06/2033","23/09/2055",0),
                  (3, "Charlie","Delhi","12/06/2053","23/09/2055",1)]    
         columns1 = ["id", "name","Address","dob","dob1","status"]
         df = spark.createDataFrame(data1, columns1)
-        return df
+        return df    
         
 
     def add_time_stamp_to_df(self, df):
