@@ -32,4 +32,4 @@ jobs:
 
       - name: Run Tests
         run: |
-          pytest pytest_practice_bigdata/test_cases
+          pytest ./test_cases
